@@ -28,6 +28,13 @@ description: Use when the user asks to do a specific recurring workflow.
 ---
 ```
 
+YAML is a simple human-readable way to write structured settings as `key: value` pairs. In a skill file, the YAML frontmatter is the small metadata block between the two `---` lines at the top.
+
+The agent reads this block before it reads the whole skill. That is why `name` and `description` matter:
+
+- `name` is the skill's identifier.
+- `description` tells the agent when the skill should be used.
+
 Good descriptions are specific. They should say when the skill should be used.
 
 ## What Belongs In A Skill
@@ -92,4 +99,3 @@ This repo intentionally keeps the starter set small:
 - `simple-wiki-memory`
 
 These are broad enough for participants to reuse without exposing private infrastructure.
-
