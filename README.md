@@ -52,6 +52,8 @@ Important boundary: this public repository contains copied starter skills. It is
 
 The public grant skills are teaching versions. They are deliberately detached from Mike's private ProjectPulse grant-writing and reference-ground-truth skills.
 
+For the advanced memory architecture, read [docs/MEMORY_HUB_ARCHITECTURE.md](docs/MEMORY_HUB_ARCHITECTURE.md). It is a sanitized public blueprint for implementing event-sourced LLM memory across multiple machines.
+
 ## Copy-Paste Prompts
 
 ### Verify Workspace Access

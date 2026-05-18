@@ -27,6 +27,7 @@ Help participants move from one-off prompting to reusable project infrastructure
 - `skills/grant-definite-language/SKILL.md` - public-safe external grant language cleanup workflow.
 - `docs/SKILL_ARCHITECTURE.md` - public skill bundle architecture.
 - `docs/PUBLIC_COPY_BOUNDARY.md` - explains that GitHub skills are detached copies, not live ProjectPulse files.
+- `docs/MEMORY_HUB_ARCHITECTURE.md` - sanitized public blueprint for multi-machine LLM memory.
 - `memory/wiki/index.md` - wiki page index.
 - `memory/wiki/log.md` - memory activity log.
 
@@ -35,6 +36,7 @@ Help participants move from one-off prompting to reusable project infrastructure
 - Keep this repository public-safe.
 - Treat all skills here as public copies. Do not assume edits here should be ported back to ProjectPulse.
 - Do not replace public skills with symlinks, adapters, or live references to private ProjectPulse skills.
+- Do not add private hostnames, local drive paths, API tokens, passwords, endpoint URLs, or machine-specific names to public memory architecture docs.
 - Do not add real private emails, student data, credentials, API keys, or unpublished sensitive material.
 - Prefer concise Markdown over heavy tooling.
 - If editing skills, keep `SKILL.md` self-contained unless a support file is clearly useful.

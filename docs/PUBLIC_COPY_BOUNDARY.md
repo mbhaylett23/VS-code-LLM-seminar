@@ -51,3 +51,7 @@ The public grant-related skills in this repo are detached teaching versions:
 - `skills/grant-definite-language/`
 
 They should not import, symlink, auto-sync, or depend on Mike's private ProjectPulse grant-writing skills.
+
+## Current Memory Architecture Document
+
+`docs/MEMORY_HUB_ARCHITECTURE.md` is also a detached public teaching document. It describes a generic event-sourced memory architecture and must not contain private hostnames, local drive paths, API keys, passwords, endpoint URLs, or deployment details from any private installation.
