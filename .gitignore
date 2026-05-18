@@ -1,0 +1,15 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Python/demo noise
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+
+# Secrets/private material
+.env
+*.key
+secrets.*
