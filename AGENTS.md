@@ -18,6 +18,7 @@ Help participants move from one-off prompting to reusable project infrastructure
 - `skills/setup-python-environment/SKILL.md` - chooses and verifies a Python setup.
 - `skills/systematic-debugging/SKILL.md` - debugging loop.
 - `skills/code-review-quality/SKILL.md` - review checklist.
+- `skills/dont-write-like-ai/SKILL.md` - removes generic AI style from serious prose.
 - `skills/simple-wiki-memory/SKILL.md` - Markdown wiki memory workflow.
 - `skills/search-outlook-email/SKILL.md` - public-safe Classic Outlook COM search workflow.
 - `skills/search-gmail-email/SKILL.md` - public-safe Gmail IMAP search workflow.

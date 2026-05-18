@@ -36,6 +36,7 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 | `setup-python-environment` | `skills/setup-python-environment/SKILL.md` | Choose the simplest Python/VS Code setup that works for the user and project. |
 | `systematic-debugging` | `skills/systematic-debugging/SKILL.md` | Reproduce, inspect, patch minimally, and verify a bug or failing test. |
 | `code-review-quality` | `skills/code-review-quality/SKILL.md` | Review code with findings first, line evidence, and missing-test risks. |
+| `dont-write-like-ai` | `skills/dont-write-like-ai/SKILL.md` | Revise serious prose so it is specific, direct, and not generic AI output. |
 | `simple-wiki-memory` | `skills/simple-wiki-memory/SKILL.md` | Maintain a durable Markdown wiki memory from raw sources, index, and log files. |
 | `search-outlook-email` | `skills/search-outlook-email/SKILL.md` | Search Classic Outlook on Windows through COM after verifying `OUTLOOK.EXE` is running. |
 | `search-gmail-email` | `skills/search-gmail-email/SKILL.md` | Search Gmail through IMAP using environment variables and app-password/OAuth-compatible setup. |
@@ -91,6 +92,14 @@ Do not invent facts. Distinguish facts found in files from answers I gave you.
 Use skills/simple-wiki-memory/SKILL.md.
 
 Initialize or update the memory wiki in this repository. Read memory/wiki/index.md and memory/wiki/log.md first. Then ask me what source or note I want to ingest.
+```
+
+### Make Writing Sound Less Like AI
+
+```text
+Use skills/dont-write-like-ai/SKILL.md.
+
+Revise the text below so it sounds like serious human writing for the intended audience. Remove generic AI phrasing, inflated claims, template structure, and unsupported vague statements. Keep the concrete facts and tell me what changed.
 ```
 
 ### Search Email Safely

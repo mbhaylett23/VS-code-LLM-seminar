@@ -96,6 +96,7 @@ This repo intentionally keeps the starter set small:
 - `setup-python-environment`
 - `systematic-debugging`
 - `code-review-quality`
+- `dont-write-like-ai`
 - `simple-wiki-memory`
 - `search-outlook-email`
 - `search-gmail-email`
