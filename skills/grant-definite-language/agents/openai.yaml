@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grant Definite Language"
+  short_description: "Remove internal uncertainty from external grant prose."
+  default_prompt: "Use this skill to scan grant text for unresolved internal notes and rewrite verified content in definite funder-facing language."

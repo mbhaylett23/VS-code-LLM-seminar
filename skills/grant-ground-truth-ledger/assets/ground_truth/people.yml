@@ -1,0 +1,6 @@
+- id: person:example.current_role
+  status: unverified
+  value: null
+  source: null
+  last_verified: null
+  caution: "Do not infer roles, commitments, or data access from coauthorship alone."

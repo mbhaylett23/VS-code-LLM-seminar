@@ -22,6 +22,9 @@ Help participants move from one-off prompting to reusable project infrastructure
 - `skills/simple-wiki-memory/SKILL.md` - Markdown wiki memory workflow.
 - `skills/search-outlook-email/SKILL.md` - public-safe Classic Outlook COM search workflow.
 - `skills/search-gmail-email/SKILL.md` - public-safe Gmail IMAP search workflow.
+- `skills/grant-ground-truth-ledger/SKILL.md` - public-safe separated grant fact ledgers.
+- `skills/bibliography-ground-truth/SKILL.md` - public-safe bibliography/citation audit workflow.
+- `skills/grant-definite-language/SKILL.md` - public-safe external grant language cleanup workflow.
 - `docs/SKILL_ARCHITECTURE.md` - public skill bundle architecture.
 - `docs/PUBLIC_COPY_BOUNDARY.md` - explains that GitHub skills are detached copies, not live ProjectPulse files.
 - `memory/wiki/index.md` - wiki page index.
@@ -31,6 +34,7 @@ Help participants move from one-off prompting to reusable project infrastructure
 
 - Keep this repository public-safe.
 - Treat all skills here as public copies. Do not assume edits here should be ported back to ProjectPulse.
+- Do not replace public skills with symlinks, adapters, or live references to private ProjectPulse skills.
 - Do not add real private emails, student data, credentials, API keys, or unpublished sensitive material.
 - Prefer concise Markdown over heavy tooling.
 - If editing skills, keep `SKILL.md` self-contained unless a support file is clearly useful.

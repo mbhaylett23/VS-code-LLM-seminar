@@ -1,0 +1,7 @@
+- id: q:example_question
+  owner: null
+  question: "Replace with an unresolved internal question."
+  blocks:
+    - claim:example_claim
+  due: null
+  notes: "Internal uncertainty belongs here, not in external grant prose."

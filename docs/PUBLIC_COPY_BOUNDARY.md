@@ -42,3 +42,12 @@ The GitHub repo is for a general audience. It should be simpler, safer, and easi
 
 The two can share ideas, but they should not share live files.
 
+## Current Grant Skills
+
+The public grant-related skills in this repo are detached teaching versions:
+
+- `skills/grant-ground-truth-ledger/`
+- `skills/bibliography-ground-truth/`
+- `skills/grant-definite-language/`
+
+They should not import, symlink, auto-sync, or depend on Mike's private ProjectPulse grant-writing skills.

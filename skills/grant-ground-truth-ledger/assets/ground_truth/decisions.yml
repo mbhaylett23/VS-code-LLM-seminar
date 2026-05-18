@@ -1,0 +1,6 @@
+- id: decision:example_scope
+  status: active
+  decision: "Replace with a project choice that must stay consistent."
+  rationale: null
+  decided_on: null
+  notes: "Decisions are not evidence; they record chosen framing or scope."

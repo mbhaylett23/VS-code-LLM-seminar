@@ -1,0 +1,8 @@
+- id: budget.example_total
+  status: unverified
+  value: null
+  unit: "EUR"
+  calculation: null
+  source: null
+  last_verified: null
+  notes: "Record the calculation or spreadsheet source for every number."

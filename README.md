@@ -40,12 +40,17 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 | `simple-wiki-memory` | `skills/simple-wiki-memory/SKILL.md` | Maintain a durable Markdown wiki memory from raw sources, index, and log files. |
 | `search-outlook-email` | `skills/search-outlook-email/SKILL.md` | Search Classic Outlook on Windows through COM after verifying `OUTLOOK.EXE` is running. |
 | `search-gmail-email` | `skills/search-gmail-email/SKILL.md` | Search Gmail through IMAP using environment variables and app-password/OAuth-compatible setup. |
+| `grant-ground-truth-ledger` | `skills/grant-ground-truth-ledger/SKILL.md` | Create separated ledgers for bibliography, claims, methods, people, budget, decisions, and open questions. |
+| `bibliography-ground-truth` | `skills/bibliography-ground-truth/SKILL.md` | Verify bibliography metadata and audit numeric or stable-reference citations against `ground_truth/bibliography.yml`. |
+| `grant-definite-language` | `skills/grant-definite-language/SKILL.md` | Remove internal uncertainty from external grant prose and move unresolved items to `open_questions.yml`. |
 
 ## Skill Architecture
 
 Read [docs/SKILL_ARCHITECTURE.md](docs/SKILL_ARCHITECTURE.md) for the bundle structure and skill-writing rules.
 
 Important boundary: this public repository contains copied starter skills. It is not a live mirror of Mike's private ProjectPulse skills. Editing a GitHub skill here will not change the local ProjectPulse skill library. See [docs/PUBLIC_COPY_BOUNDARY.md](docs/PUBLIC_COPY_BOUNDARY.md).
+
+The public grant skills are teaching versions. They are deliberately detached from Mike's private ProjectPulse grant-writing and reference-ground-truth skills.
 
 ## Copy-Paste Prompts
 
@@ -118,6 +123,30 @@ Gmail requires IMAP/OAuth/app-password setup:
 Use skills/search-gmail-email/SKILL.md.
 
 First check that the required Gmail environment variables are set. Then run a metadata-only search for "keyword" over the last 30 days. Do not print message bodies unless I explicitly approve.
+```
+
+### Set Up Grant Ground Truth
+
+```text
+Use skills/grant-ground-truth-ledger/SKILL.md.
+
+Create a ground_truth folder for this project using the public templates. Separate bibliography, claims, methods, people, budget, decisions, and open questions. Do not turn every ground-truth record into a numbered bibliography item.
+```
+
+### Audit Bibliography Links
+
+```text
+Use skills/bibliography-ground-truth/SKILL.md.
+
+Check that every numeric citation in my proposal text has a matching bibliography record, and that every bibliography record has full title, full author list, year, venue, DOI/PMID/URL/local source, verification status, supported claims, and cited locations.
+```
+
+### Remove Internal Grant Notes
+
+```text
+Use skills/grant-definite-language/SKILL.md.
+
+Scan this proposal draft for TODO, TBC, "need to check", "maybe", "[CITE]", and other internal uncertainty. Rewrite only verified content in definite funder-facing language, and move unresolved items to ground_truth/open_questions.yml.
 ```
 
 ## Memory Wiki

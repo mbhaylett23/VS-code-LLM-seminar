@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bibliography Ground Truth"
+  short_description: "Audit bibliography records and in-text citations."
+  default_prompt: "Use this skill to build and audit a bibliography ledger against proposal text."

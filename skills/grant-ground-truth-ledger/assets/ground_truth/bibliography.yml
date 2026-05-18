@@ -1,0 +1,17 @@
+- id: ref:example_2026_source
+  status: unverified
+  citation_number: null
+  title: "Replace with full source title"
+  authors:
+    - "Family name, Given name"
+  year: 2026
+  venue: "Journal, funder, institution, or official source"
+  doi: null
+  pmid: null
+  pmcid: null
+  url: null
+  local_source: null
+  supports_claims:
+    - claim:example_claim
+  cited_in: []
+  notes: "Replace this example before using externally."

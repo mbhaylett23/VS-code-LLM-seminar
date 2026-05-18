@@ -1,0 +1,7 @@
+- id: method:example.measurement
+  status: unverified
+  value: null
+  unit: null
+  source: null
+  last_verified: null
+  notes: "Use for protocol, equipment, analysis, or measurement details."

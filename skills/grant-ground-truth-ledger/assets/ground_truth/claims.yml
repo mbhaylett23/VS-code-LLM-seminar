@@ -1,0 +1,12 @@
+- id: claim:example_claim
+  status: unverified
+  text: "Replace with one atomic claim."
+  evidence:
+    - ref:example_2026_source
+  allowed_wording:
+    - "reports"
+    - "is associated with"
+  forbidden_wording:
+    - "proves"
+    - "causes"
+  notes: "Claims should be atomic and evidence-backed."

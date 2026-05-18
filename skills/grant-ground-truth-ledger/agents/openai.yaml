@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grant Ground Truth Ledger"
+  short_description: "Create separated fact ledgers for grant work."
+  default_prompt: "Use this skill to create separated ground_truth ledgers for a grant or research document."
