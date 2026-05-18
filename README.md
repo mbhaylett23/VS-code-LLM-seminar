@@ -13,6 +13,7 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 - `skills/` - reusable starter skills participants can inspect, copy, or adapt.
 - `adapters/codex/` - an example Codex adapter pattern from ProjectPulse.
 - `memory/` - a simple Markdown wiki memory starter inspired by Andrej Karpathy's LLM Wiki pattern.
+- `docs/` - skill architecture notes and the boundary between this public repo and Mike's private ProjectPulse skills.
 
 ## Recommended Seminar Flow
 
@@ -36,6 +37,12 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 | `systematic-debugging` | `skills/systematic-debugging/SKILL.md` | Reproduce, inspect, patch minimally, and verify a bug or failing test. |
 | `code-review-quality` | `skills/code-review-quality/SKILL.md` | Review code with findings first, line evidence, and missing-test risks. |
 | `simple-wiki-memory` | `skills/simple-wiki-memory/SKILL.md` | Maintain a durable Markdown wiki memory from raw sources, index, and log files. |
+
+## Skill Architecture
+
+Read [docs/SKILL_ARCHITECTURE.md](docs/SKILL_ARCHITECTURE.md) for the bundle structure and skill-writing rules.
+
+Important boundary: this public repository contains copied starter skills. It is not a live mirror of Mike's private ProjectPulse skills. Editing a GitHub skill here will not change the local ProjectPulse skill library. See [docs/PUBLIC_COPY_BOUNDARY.md](docs/PUBLIC_COPY_BOUNDARY.md).
 
 ## Copy-Paste Prompts
 

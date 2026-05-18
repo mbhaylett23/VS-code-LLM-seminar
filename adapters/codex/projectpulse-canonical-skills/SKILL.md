@@ -1,6 +1,6 @@
 ---
 name: projectpulse-canonical-skills
-description: Locate and use the shared ProjectPulse canonical skills repository from any LLM agent. Use when an agent needs a skill-backed workflow, shared skill lookup, Outlook email/calendar action, PDF processing, ground-truth checking, grant writing, write-as-Mike drafting, paper ingestion, document conversion, package installation, memory-hub work, or skill creation/update.
+description: Example adapter showing how Codex can point to a separate canonical skill library. Use only in Mike's private ProjectPulse environment; seminar participants should use the public skills in this repository instead.
 metadata:
   category: infrastructure
   tags: [skills, adapter, codex, claude, gemini, canonical, cross-agent]
@@ -10,7 +10,22 @@ metadata:
 
 # ProjectPulse Canonical Skills
 
+This is an adapter example, not a seminar skill.
+
 `G:/My Drive/PythonCode/ProjectPulse/pulse_memory/skills/` is the canonical skills repository for Claude, Codex, Gemini, and future agents.
+
+That path only exists in Mike's private ProjectPulse setup. In this public seminar repo, use the copied skills under:
+
+```text
+skills/
+```
+
+For the public skill-bundle architecture, read:
+
+```text
+docs/SKILL_ARCHITECTURE.md
+docs/PUBLIC_COPY_BOUNDARY.md
+```
 
 Agent-specific skill folders should contain only discovery adapters that point here. Do not mirror full `SKILL.md` bodies, scripts, references, or assets into agent-specific folders.
 
@@ -34,3 +49,7 @@ Architecture docs:
 - `G:/My Drive/PythonCode/ProjectPulse/pulse_memory/skills/MEMORY.md`
 - `G:/My Drive/PythonCode/ProjectPulse/pulse_memory/skills/SKILL_ARCHITECTURE.md`
 
+Public seminar equivalent:
+
+- `docs/SKILL_ARCHITECTURE.md`
+- `docs/PUBLIC_COPY_BOUNDARY.md`
