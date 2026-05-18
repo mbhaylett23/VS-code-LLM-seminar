@@ -37,6 +37,8 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 | `systematic-debugging` | `skills/systematic-debugging/SKILL.md` | Reproduce, inspect, patch minimally, and verify a bug or failing test. |
 | `code-review-quality` | `skills/code-review-quality/SKILL.md` | Review code with findings first, line evidence, and missing-test risks. |
 | `simple-wiki-memory` | `skills/simple-wiki-memory/SKILL.md` | Maintain a durable Markdown wiki memory from raw sources, index, and log files. |
+| `search-outlook-email` | `skills/search-outlook-email/SKILL.md` | Search Classic Outlook on Windows through COM after verifying `OUTLOOK.EXE` is running. |
+| `search-gmail-email` | `skills/search-gmail-email/SKILL.md` | Search Gmail through IMAP using environment variables and app-password/OAuth-compatible setup. |
 
 ## Skill Architecture
 
@@ -89,6 +91,24 @@ Do not invent facts. Distinguish facts found in files from answers I gave you.
 Use skills/simple-wiki-memory/SKILL.md.
 
 Initialize or update the memory wiki in this repository. Read memory/wiki/index.md and memory/wiki/log.md first. Then ask me what source or note I want to ingest.
+```
+
+### Search Email Safely
+
+Outlook requires Classic Outlook for Windows:
+
+```text
+Use skills/search-outlook-email/SKILL.md.
+
+First verify Classic Outlook is running as OUTLOOK.EXE. Then run a metadata-only search for "keyword" over the last 30 days. Do not print message bodies unless I explicitly approve.
+```
+
+Gmail requires IMAP/OAuth/app-password setup:
+
+```text
+Use skills/search-gmail-email/SKILL.md.
+
+First check that the required Gmail environment variables are set. Then run a metadata-only search for "keyword" over the last 30 days. Do not print message bodies unless I explicitly approve.
 ```
 
 ## Memory Wiki

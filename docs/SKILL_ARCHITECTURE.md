@@ -97,5 +97,7 @@ This repo intentionally keeps the starter set small:
 - `systematic-debugging`
 - `code-review-quality`
 - `simple-wiki-memory`
+- `search-outlook-email`
+- `search-gmail-email`
 
 These are broad enough for participants to reuse without exposing private infrastructure.

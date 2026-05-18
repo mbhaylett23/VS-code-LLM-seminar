@@ -19,6 +19,8 @@ Help participants move from one-off prompting to reusable project infrastructure
 - `skills/systematic-debugging/SKILL.md` - debugging loop.
 - `skills/code-review-quality/SKILL.md` - review checklist.
 - `skills/simple-wiki-memory/SKILL.md` - Markdown wiki memory workflow.
+- `skills/search-outlook-email/SKILL.md` - public-safe Classic Outlook COM search workflow.
+- `skills/search-gmail-email/SKILL.md` - public-safe Gmail IMAP search workflow.
 - `docs/SKILL_ARCHITECTURE.md` - public skill bundle architecture.
 - `docs/PUBLIC_COPY_BOUNDARY.md` - explains that GitHub skills are detached copies, not live ProjectPulse files.
 - `memory/wiki/index.md` - wiki page index.
