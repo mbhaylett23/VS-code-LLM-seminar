@@ -48,6 +48,14 @@ Help participants move from one-off prompting to reusable project infrastructure
 - GitHub skill copies must never overwrite private/local skills unless the user explicitly asks for that reverse import.
 - Do not invent verification results. Run commands before claiming they passed.
 
+## Current Status 2026-05-20
+
+- This public repo intentionally contains participant-facing skills only.
+- `skills/create-new-skill/` and `skills/how-to-write-a-skill/` are public teaching skills for making reusable skills.
+- `skills/extract-grant-call-pdf/` is public and includes fail-fast dependency checks, OCR handling, standard `venv`/`pip` setup, and conda only as an optional route.
+- A private/local publishing workflow exists outside this public repo. Do not add a public `publish-skills-to-github` skill here unless Mike explicitly asks to make that private workflow public.
+- If asked to publish more skills, keep the direction one-way: private/local source -> sanitize -> public GitHub copy. Do not copy GitHub content back over private/local skills unless explicitly requested.
+
 ## Verification
 
 No build step is required. Before finishing edits:
