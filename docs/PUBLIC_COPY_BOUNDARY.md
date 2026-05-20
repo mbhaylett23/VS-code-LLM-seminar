@@ -51,11 +51,13 @@ The public skill-authoring skills are detached teaching versions:
 
 - `skills/create-new-skill/`
 - `skills/how-to-write-a-skill/`
+- `skills/publish-skills-to-github/`
 
 They should not expose private paths or private memory-system implementation
 details. They should teach the general pattern: reusable instructions,
-dependency gates, explicit stop conditions, tested failure paths, and public
-safety checks.
+dependency gates, explicit stop conditions, tested failure paths, public safety
+checks, and the rule that GitHub copies never overwrite private/local skills
+unless the user explicitly asks for that reverse import.
 
 ## Current Memory Architecture Document
 

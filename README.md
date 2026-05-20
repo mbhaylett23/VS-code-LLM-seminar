@@ -34,6 +34,7 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 |---|---|---|
 | `create-new-skill` | `skills/create-new-skill/SKILL.md` | Create or update a reusable skill with fail-fast dependency gates and tested stop conditions. |
 | `how-to-write-a-skill` | `skills/how-to-write-a-skill/SKILL.md` | Compatibility pointer to `create-new-skill` for older prompts or users asking how to write a skill. |
+| `publish-skills-to-github` | `skills/publish-skills-to-github/SKILL.md` | Publish selected sanitized skill bundles to GitHub without overwriting private/local skills. |
 | `create-agents-md` | `skills/create-agents-md/SKILL.md` | Create a workspace-specific `AGENTS.md` from local inspection plus a short interview. |
 | `setup-python-environment` | `skills/setup-python-environment/SKILL.md` | Choose the simplest Python/VS Code setup that works for the user and project. |
 | `systematic-debugging` | `skills/systematic-debugging/SKILL.md` | Reproduce, inspect, patch minimally, and verify a bug or failing test. |
@@ -110,6 +111,14 @@ Initialize or update the memory wiki in this repository. Read memory/wiki/index.
 Use skills/create-new-skill/SKILL.md.
 
 I want to turn this repeated workflow into a reusable skill. First check whether an existing skill already covers it. Then define the required dependencies, dependency gate, stop conditions, tests, and public-safety checks before drafting the skill.
+```
+
+### Publish A Skill To GitHub
+
+```text
+Use skills/publish-skills-to-github/SKILL.md.
+
+I want to publish this skill publicly. Treat the GitHub version as a sanitized copy, not the private source of truth. Do not copy GitHub content back over my local skill unless I explicitly ask. Make sure the public skill contains no private information and does not assume users have conda; include a standard Python route and conda as an option when packages are needed.
 ```
 
 ### Make Writing Sound Less Like AI

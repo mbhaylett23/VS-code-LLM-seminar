@@ -49,6 +49,8 @@ starts work. Silent failure is a skill bug.
   and rerun the gate.
 - If it cannot be installed, stop and give the user the exact install command or
   manual action.
+- Public skills must not assume conda. If Python packages are required, include
+  a standard `venv`/`pip` route and keep conda as an optional route.
 - Optional dependencies become required when the user's requested outcome
   depends on them. OCR is optional for a text-layer PDF, but required for a
   scanned PDF or explicit OCR request.
@@ -111,6 +113,7 @@ This repo intentionally keeps the starter set small:
 
 - `create-new-skill`
 - `how-to-write-a-skill`
+- `publish-skills-to-github`
 - `create-agents-md`
 - `setup-python-environment`
 - `systematic-debugging`

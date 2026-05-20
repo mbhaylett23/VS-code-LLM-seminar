@@ -21,13 +21,40 @@ the document.
 
 - Required Python packages: `pymupdf`, `pypdf`, and `pillow`.
 - Required OCR tool: `tesseract`.
-- Recommended conda environment:
+- Choose one Python command for this skill:
+
+```text
+Windows venv: .\.venv\Scripts\python.exe
+macOS/Linux venv: ./.venv/bin/python
+Conda option: conda run -n grant-pdf-extract python
+```
+
+Standard Python setup on Windows:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install pymupdf pypdf pillow
+winget install UB-Mannheim.TesseractOCR
+```
+
+Standard Python setup on macOS/Linux:
+
+```bash
+python3 -m venv .venv
+./.venv/bin/python -m pip install --upgrade pip
+./.venv/bin/python -m pip install pymupdf pypdf pillow
+# macOS: brew install tesseract
+# Ubuntu/Debian: sudo apt-get install tesseract-ocr
+```
+
+Optional conda environment:
 
 ```powershell
 conda create -n grant-pdf-extract -c conda-forge python=3.12 pymupdf pypdf pillow tesseract -y
 ```
 
-Or install into an existing conda environment:
+Or install into an existing conda environment if the user already uses conda:
 
 ```powershell
 conda install -n <env> -c conda-forge pymupdf pypdf pillow tesseract -y
@@ -53,19 +80,20 @@ missing OCR as a warning for scanned PDFs.
 From this skill directory:
 
 ```powershell
-conda run -n grant-pdf-extract python "scripts/extract_grant_call_pdf.py" --check-deps
+<python> "scripts/extract_grant_call_pdf.py" --check-deps
 ```
 
 Proceed only when the status is `ok`. If the status is `dependency_missing`,
 install the missing tool or package and rerun the check. Do not continue in
-best-effort mode.
+best-effort mode. Replace `<python>` with the venv Python path or the conda
+option listed above.
 
 ### 2. Run Extraction
 
 Single PDF:
 
 ```powershell
-conda run -n grant-pdf-extract python "scripts/extract_grant_call_pdf.py" `
+<python> "scripts/extract_grant_call_pdf.py" `
   --input "path/to/call.pdf" `
   --output "grant_call_extraction"
 ```
@@ -73,13 +101,13 @@ conda run -n grant-pdf-extract python "scripts/extract_grant_call_pdf.py" `
 Multiple PDFs:
 
 ```powershell
-conda run -n grant-pdf-extract python "scripts/extract_grant_call_pdf.py" --input "*.pdf" --output "grant_call_extraction"
+<python> "scripts/extract_grant_call_pdf.py" --input "*.pdf" --output "grant_call_extraction"
 ```
 
 Encrypted PDF:
 
 ```powershell
-conda run -n grant-pdf-extract python "scripts/extract_grant_call_pdf.py" --input "call.pdf" --password "<password>" --output "grant_call_extraction"
+<python> "scripts/extract_grant_call_pdf.py" --input "call.pdf" --password "<password>" --output "grant_call_extraction"
 ```
 
 The script writes:

@@ -16,6 +16,7 @@ Help participants move from one-off prompting to reusable project infrastructure
 - `README.md` - participant-facing overview and copy-paste prompts.
 - `skills/create-new-skill/SKILL.md` - public skill-authoring workflow with fail-fast dependency gates.
 - `skills/how-to-write-a-skill/SKILL.md` - compatibility pointer to `create-new-skill`.
+- `skills/publish-skills-to-github/SKILL.md` - public skill publication workflow and private/local boundary rule.
 - `skills/create-agents-md/SKILL.md` - creates workspace-specific `AGENTS.md`.
 - `skills/setup-python-environment/SKILL.md` - chooses and verifies a Python setup.
 - `skills/systematic-debugging/SKILL.md` - debugging loop.
@@ -44,6 +45,8 @@ Help participants move from one-off prompting to reusable project infrastructure
 - Prefer concise Markdown over heavy tooling.
 - If editing skills, keep `SKILL.md` self-contained unless a support file is clearly useful.
 - Any skill with dependencies must fail fast: check required tools before work starts, stop on missing requirements, and give exact install/recovery instructions.
+- Public skills must not assume conda. Include standard Python `venv`/`pip` instructions when packages are needed, with conda only as an optional route.
+- GitHub skill copies must never overwrite private/local skills unless the user explicitly asks for that reverse import.
 - Do not invent verification results. Run commands before claiming they passed.
 
 ## Verification
