@@ -5,6 +5,23 @@ description: Create or update workspace-level AGENTS.md instructions from a user
 
 # Create AGENTS.md
 
+## Fail-Fast Gate
+
+Before following this skill, identify the required inputs, tools, services,
+accounts, environment variables, and permissions. Run the dependency or preflight
+checks named in this skill before doing substantive work.
+
+If a required item is missing or a check fails, stop with an explicit status such
+as `dependency_missing`, `input_missing`, `permission_blocked`, or
+`verification_failed`. Do not continue in best-effort mode, do not silently skip
+the unavailable step, and do not claim success until the required verification
+has passed.
+
+Public skills must not assume the user has conda. If Python packages are needed,
+provide a standard `venv`/`pip` route and keep conda as an optional route. If a
+non-Python tool is required, provide a clear install instruction or ask the user
+to install it before continuing.
+
 ## Purpose
 
 Create a concise, useful `AGENTS.md` that tells AI agents what the workspace is, who the work is for, what files matter, how to handle local Python/package tooling, what safety boundaries apply, and what should be updated at the end of a session.

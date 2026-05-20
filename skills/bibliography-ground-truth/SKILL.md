@@ -5,6 +5,23 @@ description: Build and audit a bibliography ground-truth ledger for grants, repo
 
 # Bibliography Ground Truth
 
+## Fail-Fast Gate
+
+Before following this skill, identify the required inputs, tools, services,
+accounts, environment variables, and permissions. Run the dependency or preflight
+checks named in this skill before doing substantive work.
+
+If a required item is missing or a check fails, stop with an explicit status such
+as `dependency_missing`, `input_missing`, `permission_blocked`, or
+`verification_failed`. Do not continue in best-effort mode, do not silently skip
+the unavailable step, and do not claim success until the required verification
+has passed.
+
+Public skills must not assume the user has conda. If Python packages are needed,
+provide a standard `venv`/`pip` route and keep conda as an optional route. If a
+non-Python tool is required, provide a clear install instruction or ask the user
+to install it before continuing.
+
 Use this skill when references matter enough that "looks plausible" is not good enough.
 
 The rule is simple: bibliography records use stable IDs; numeric citation numbers are rendered output and must be audited.
