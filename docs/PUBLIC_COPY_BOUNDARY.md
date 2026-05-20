@@ -51,7 +51,6 @@ The public skill-authoring skills are detached teaching versions:
 
 - `skills/create-new-skill/`
 - `skills/how-to-write-a-skill/`
-- `skills/publish-skills-to-github/`
 
 They should not expose private paths or private memory-system implementation
 details. They should teach the general pattern: reusable instructions,

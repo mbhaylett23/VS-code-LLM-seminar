@@ -16,7 +16,6 @@ Help participants move from one-off prompting to reusable project infrastructure
 - `README.md` - participant-facing overview and copy-paste prompts.
 - `skills/create-new-skill/SKILL.md` - public skill-authoring workflow with fail-fast dependency gates.
 - `skills/how-to-write-a-skill/SKILL.md` - compatibility pointer to `create-new-skill`.
-- `skills/publish-skills-to-github/SKILL.md` - public skill publication workflow and private/local boundary rule.
 - `skills/create-agents-md/SKILL.md` - creates workspace-specific `AGENTS.md`.
 - `skills/setup-python-environment/SKILL.md` - chooses and verifies a Python setup.
 - `skills/systematic-debugging/SKILL.md` - debugging loop.

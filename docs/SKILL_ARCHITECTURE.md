@@ -113,7 +113,6 @@ This repo intentionally keeps the starter set small:
 
 - `create-new-skill`
 - `how-to-write-a-skill`
-- `publish-skills-to-github`
 - `create-agents-md`
 - `setup-python-environment`
 - `systematic-debugging`
