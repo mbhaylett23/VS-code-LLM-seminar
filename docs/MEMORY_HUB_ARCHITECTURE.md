@@ -1,8 +1,8 @@
-# ProjectPulse Memory Hub Architecture
+# Public Memory Hub Architecture
 
 Public implementation blueprint for a multi-machine LLM memory system.
 
-This document is a sanitized teaching architecture. It is designed so another LLM, on another person's computer, can implement the pattern without needing access to any private ProjectPulse infrastructure.
+This document is a sanitized teaching architecture. It is designed so another LLM, on another person's computer, can implement the pattern without needing access to private infrastructure.
 
 ## Design Goal
 

@@ -37,6 +37,29 @@ The agent reads this block before it reads the whole skill. That is why `name` a
 
 Good descriptions are specific. They should say when the skill should be used.
 
+## Fail Fast Dependency Rule
+
+Every public skill must define what counts as a hard requirement before it
+starts work. Silent failure is a skill bug.
+
+- List required packages, command-line tools, services, accounts, environment
+  variables, permissions, and source files.
+- Add a dependency gate that proves required tools are installed and usable.
+- If a required dependency is missing and can be safely installed, install it
+  and rerun the gate.
+- If it cannot be installed, stop and give the user the exact install command or
+  manual action.
+- Optional dependencies become required when the user's requested outcome
+  depends on them. OCR is optional for a text-layer PDF, but required for a
+  scanned PDF or explicit OCR request.
+- Scripts should exit nonzero on missing required dependencies, unsupported
+  inputs, failed external commands, failed verification gates, or incomplete
+  required outputs.
+- Skills should use explicit statuses such as `ok`, `ok_with_warnings`,
+  `dependency_missing`, `needs_password`, `ocr_required`, or
+  `verification_failed`.
+- Test both happy paths and failure paths.
+
 ## What Belongs In A Skill
 
 Put stable, reusable procedure into a skill:
@@ -64,34 +87,30 @@ This keeps the agent focused and avoids filling the context window with irreleva
 
 The skills in this GitHub repository are public, copied starter versions.
 
-They are not symlinks, submodules, or live mirrors of Mike's private ProjectPulse skill library. Editing a skill here changes only this public repository.
+They are not symlinks, submodules, or live mirrors of any private local skill library. Editing a skill here changes only this public repository.
 
-Mike's private canonical skills live separately at:
-
-```text
-G:/My Drive/PythonCode/ProjectPulse/pulse_memory/skills/
-```
-
-That private path is included only to explain the original architecture. Seminar participants do not need it.
+Seminar participants do not need access to any private skill library.
 
 ## Updating Skills Safely
 
 Use this rule:
 
 ```text
-ProjectPulse -> copy -> sanitize -> GitHub
+private source -> copy -> sanitize -> GitHub
 ```
 
 Do not sync changes automatically in either direction.
 
-If a public skill improves during the seminar, review it manually before deciding whether to port the idea back into ProjectPulse.
+If a public skill improves during the seminar, review it manually before deciding whether to port the idea back into a private local skill library.
 
-If a private ProjectPulse skill improves, copy it manually into this repo only after removing private paths, internal names, secrets, emails, student details, and Mike-specific workflow assumptions.
+If a private skill improves, copy it manually into this repo only after removing private paths, internal names, secrets, emails, student details, and machine-specific workflow assumptions.
 
 ## Good Starter Skills
 
 This repo intentionally keeps the starter set small:
 
+- `create-new-skill`
+- `how-to-write-a-skill`
 - `create-agents-md`
 - `setup-python-environment`
 - `systematic-debugging`
@@ -100,5 +119,6 @@ This repo intentionally keeps the starter set small:
 - `simple-wiki-memory`
 - `search-outlook-email`
 - `search-gmail-email`
+- `extract-grant-call-pdf`
 
 These are broad enough for participants to reuse without exposing private infrastructure.

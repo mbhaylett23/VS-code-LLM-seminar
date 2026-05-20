@@ -14,6 +14,8 @@ Help participants move from one-off prompting to reusable project infrastructure
 ## Important Files
 
 - `README.md` - participant-facing overview and copy-paste prompts.
+- `skills/create-new-skill/SKILL.md` - public skill-authoring workflow with fail-fast dependency gates.
+- `skills/how-to-write-a-skill/SKILL.md` - compatibility pointer to `create-new-skill`.
 - `skills/create-agents-md/SKILL.md` - creates workspace-specific `AGENTS.md`.
 - `skills/setup-python-environment/SKILL.md` - chooses and verifies a Python setup.
 - `skills/systematic-debugging/SKILL.md` - debugging loop.
@@ -22,11 +24,12 @@ Help participants move from one-off prompting to reusable project infrastructure
 - `skills/simple-wiki-memory/SKILL.md` - Markdown wiki memory workflow.
 - `skills/search-outlook-email/SKILL.md` - public-safe Classic Outlook COM search workflow.
 - `skills/search-gmail-email/SKILL.md` - public-safe Gmail IMAP search workflow.
+- `skills/extract-grant-call-pdf/SKILL.md` - public-safe grant-call PDF extraction with mandatory OCR/dependency preflight.
 - `skills/grant-ground-truth-ledger/SKILL.md` - public-safe separated grant fact ledgers.
 - `skills/bibliography-ground-truth/SKILL.md` - public-safe bibliography/citation audit workflow.
 - `skills/grant-definite-language/SKILL.md` - public-safe external grant language cleanup workflow.
 - `docs/SKILL_ARCHITECTURE.md` - public skill bundle architecture.
-- `docs/PUBLIC_COPY_BOUNDARY.md` - explains that GitHub skills are detached copies, not live ProjectPulse files.
+- `docs/PUBLIC_COPY_BOUNDARY.md` - explains that GitHub skills are detached public copies, not live private files.
 - `docs/MEMORY_HUB_ARCHITECTURE.md` - sanitized public blueprint for multi-machine LLM memory.
 - `memory/wiki/index.md` - wiki page index.
 - `memory/wiki/log.md` - memory activity log.
@@ -34,12 +37,13 @@ Help participants move from one-off prompting to reusable project infrastructure
 ## Operating Rules
 
 - Keep this repository public-safe.
-- Treat all skills here as public copies. Do not assume edits here should be ported back to ProjectPulse.
-- Do not replace public skills with symlinks, adapters, or live references to private ProjectPulse skills.
+- Treat all skills here as public copies. Do not assume edits here should be ported back to any private local skill library.
+- Do not replace public skills with symlinks, adapters, or live references to private skills.
 - Do not add private hostnames, local drive paths, API tokens, passwords, endpoint URLs, or machine-specific names to public memory architecture docs.
 - Do not add real private emails, student data, credentials, API keys, or unpublished sensitive material.
 - Prefer concise Markdown over heavy tooling.
 - If editing skills, keep `SKILL.md` self-contained unless a support file is clearly useful.
+- Any skill with dependencies must fail fast: check required tools before work starts, stop on missing requirements, and give exact install/recovery instructions.
 - Do not invent verification results. Run commands before claiming they passed.
 
 ## Verification

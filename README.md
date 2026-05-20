@@ -11,9 +11,8 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 ## What This Repo Contains
 
 - `skills/` - reusable starter skills participants can inspect, copy, or adapt.
-- `adapters/codex/` - an example Codex adapter pattern from ProjectPulse.
 - `memory/` - a simple Markdown wiki memory starter inspired by Andrej Karpathy's LLM Wiki pattern.
-- `docs/` - skill architecture notes and the boundary between this public repo and Mike's private ProjectPulse skills.
+- `docs/` - skill architecture notes and the boundary between this public repo and private local skill libraries.
 
 ## Recommended Seminar Flow
 
@@ -26,12 +25,15 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 4. Ask the agent to read `README.md` and `AGENTS.md` without editing.
 5. Open one real project folder you care about.
 6. Use `skills/create-agents-md/SKILL.md` to create that folder's first `AGENTS.md`.
-7. Use skills for practical work: setup, debugging, review, and memory.
+7. Use `skills/create-new-skill/SKILL.md` when turning a repeated workflow into a reusable skill.
+8. Use skills for practical work: setup, debugging, review, documents, email, grants, and memory.
 
 ## Starter Skills
 
 | Skill | Path | Use |
 |---|---|---|
+| `create-new-skill` | `skills/create-new-skill/SKILL.md` | Create or update a reusable skill with fail-fast dependency gates and tested stop conditions. |
+| `how-to-write-a-skill` | `skills/how-to-write-a-skill/SKILL.md` | Compatibility pointer to `create-new-skill` for older prompts or users asking how to write a skill. |
 | `create-agents-md` | `skills/create-agents-md/SKILL.md` | Create a workspace-specific `AGENTS.md` from local inspection plus a short interview. |
 | `setup-python-environment` | `skills/setup-python-environment/SKILL.md` | Choose the simplest Python/VS Code setup that works for the user and project. |
 | `systematic-debugging` | `skills/systematic-debugging/SKILL.md` | Reproduce, inspect, patch minimally, and verify a bug or failing test. |
@@ -40,6 +42,7 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 | `simple-wiki-memory` | `skills/simple-wiki-memory/SKILL.md` | Maintain a durable Markdown wiki memory from raw sources, index, and log files. |
 | `search-outlook-email` | `skills/search-outlook-email/SKILL.md` | Search Classic Outlook on Windows through COM after verifying `OUTLOOK.EXE` is running. |
 | `search-gmail-email` | `skills/search-gmail-email/SKILL.md` | Search Gmail through IMAP using environment variables and app-password/OAuth-compatible setup. |
+| `extract-grant-call-pdf` | `skills/extract-grant-call-pdf/SKILL.md` | Extract source-backed summaries and key details from grant-call PDFs with mandatory OCR/dependency preflight. |
 | `grant-ground-truth-ledger` | `skills/grant-ground-truth-ledger/SKILL.md` | Create separated ledgers for bibliography, claims, methods, people, budget, decisions, and open questions. |
 | `bibliography-ground-truth` | `skills/bibliography-ground-truth/SKILL.md` | Verify bibliography metadata and audit numeric or stable-reference citations against `ground_truth/bibliography.yml`. |
 | `grant-definite-language` | `skills/grant-definite-language/SKILL.md` | Remove internal uncertainty from external grant prose and move unresolved items to `open_questions.yml`. |
@@ -48,9 +51,9 @@ Prompting is temporary. Project instructions, skills, tools, memory, and verific
 
 Read [docs/SKILL_ARCHITECTURE.md](docs/SKILL_ARCHITECTURE.md) for the bundle structure and skill-writing rules.
 
-Important boundary: this public repository contains copied starter skills. It is not a live mirror of Mike's private ProjectPulse skills. Editing a GitHub skill here will not change the local ProjectPulse skill library. See [docs/PUBLIC_COPY_BOUNDARY.md](docs/PUBLIC_COPY_BOUNDARY.md).
+Important boundary: this public repository contains copied starter skills. It is not a live mirror of any private local skill library. Editing a GitHub skill here will not change private local skills. See [docs/PUBLIC_COPY_BOUNDARY.md](docs/PUBLIC_COPY_BOUNDARY.md).
 
-The public grant skills are teaching versions. They are deliberately detached from Mike's private ProjectPulse grant-writing and reference-ground-truth skills.
+The public grant skills are teaching versions. They are deliberately detached from private grant-writing and reference-ground-truth workflows.
 
 For the advanced memory architecture, read [docs/MEMORY_HUB_ARCHITECTURE.md](docs/MEMORY_HUB_ARCHITECTURE.md). It is a sanitized public blueprint for implementing event-sourced LLM memory across multiple machines.
 
@@ -101,6 +104,14 @@ Use skills/simple-wiki-memory/SKILL.md.
 Initialize or update the memory wiki in this repository. Read memory/wiki/index.md and memory/wiki/log.md first. Then ask me what source or note I want to ingest.
 ```
 
+### Create Or Improve A Skill
+
+```text
+Use skills/create-new-skill/SKILL.md.
+
+I want to turn this repeated workflow into a reusable skill. First check whether an existing skill already covers it. Then define the required dependencies, dependency gate, stop conditions, tests, and public-safety checks before drafting the skill.
+```
+
 ### Make Writing Sound Less Like AI
 
 ```text
@@ -125,6 +136,14 @@ Gmail requires IMAP/OAuth/app-password setup:
 Use skills/search-gmail-email/SKILL.md.
 
 First check that the required Gmail environment variables are set. Then run a metadata-only search for "keyword" over the last 30 days. Do not print message bodies unless I explicitly approve.
+```
+
+### Extract A Grant-Call PDF
+
+```text
+Use skills/extract-grant-call-pdf/SKILL.md.
+
+Run the dependency gate first. If OCR/Tesseract or required Python packages are missing, stop and tell me exactly what to install. If the gate passes, extract the PDF and produce a source-backed summary with deadlines, eligibility, budget, required documents, evaluation criteria, and watch-outs.
 ```
 
 ### Set Up Grant Ground Truth
@@ -162,15 +181,9 @@ The memory example follows the pattern in Andrej Karpathy's `llm-wiki.md`: raw s
 
 Source idea: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 
-## Codex Adapter
-
-`adapters/codex/projectpulse-canonical-skills/SKILL.md` is included as an example of a Codex adapter that points to a separate canonical skill library.
-
-It is mainly useful to Mike's local ProjectPulse setup. Seminar participants should usually use the skills in this repository directly rather than that adapter.
-
 ## Safety Rules
 
 - Do not paste private email, student data, credentials, API keys, or unpublished research into a public demo.
 - Do not let an agent claim it has run a command unless it actually ran it.
-- If a tool, library, or file is unavailable, the agent should say so rather than silently bypassing the step.
+- If a required tool, library, account, service, or file is unavailable, the agent should stop with a clear status and install/recovery instruction rather than silently bypassing the step.
 - Review generated `AGENTS.md` and wiki pages before trusting them.
